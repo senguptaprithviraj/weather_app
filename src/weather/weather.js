@@ -17,7 +17,7 @@ const getWeather = function (location){
        
       });
     
-    return "This is my notes ...";
+    return "This is my new notes ...";
 }
 
 module.exports = getWeather;
