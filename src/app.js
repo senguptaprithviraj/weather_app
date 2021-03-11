@@ -5,7 +5,7 @@ const getWeather = require('./weather/weather.js')
 const app = express()
 
 const folderPath = path.join(__dirname, '..', '/public')
-const port = process.env.port || '3000'
+const port = process.env.PORT || '3000'
 
 app.use(express.static(folderPath))
 
