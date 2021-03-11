@@ -5,6 +5,7 @@ const getWeather = require('./weather/weather.js')
 const app = express()
 
 const folderPath = path.join(__dirname, '..', '/public')
+const port = process.env.port || '3000'
 
 app.use(express.static(folderPath))
 
@@ -31,6 +32,6 @@ app.get('/getWeather', (req, res) => {
     })
 
 })
-app.listen('3000', () => {
-    console.log('Server is up on 3000');
+app.listen(port, () => {
+    console.log('Server is up on '+port);
 })
