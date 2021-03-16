@@ -9,7 +9,12 @@ const port = process.env.PORT || '3000'
 
 app.use(express.static(folderPath))
 
-
+app.get('', (req, res) => {
+    res.render('index', {
+        title: 'Weather',
+        name: 'Prithviraj'
+    })
+})
 app.get('/getWeather', (req, res) => {
     if (!req.query || !req.query.location) {
         return res.send(
