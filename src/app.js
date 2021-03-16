@@ -37,6 +37,7 @@ app.get('/getWeather', (req, res) => {
     })
 
 })
+app.set('view engine', 'html');
 app.listen(port, () => {
     console.log('Server is up on '+port);
 })
